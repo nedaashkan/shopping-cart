@@ -89,8 +89,10 @@ let decrement = (id) => {
   else {
     search.item -= 1;
   }
-  localStorage.setItem("data", JSON.stringify(shoppingCart));
   update(id);
+
+  shoppingCart = shoppingCart.filter((x) => x.item !== 0);
+  localStorage.setItem("data", JSON.stringify(shoppingCart));
 };
 
 let update = (id) => {
