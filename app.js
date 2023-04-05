@@ -1,41 +1,3 @@
-let shopItemsData = [
-  {
-    id: 1,
-    name: "Chicken Egg Salad",
-    price: 10,
-    img: "images/1.PNG",
-  },
-  {
-    id: 2,
-    name: "Hot Grid Chicken",
-    price: 20,
-    img: "images/2.PNG",
-  },
-  {
-    id: 3,
-    name: "Salmon Salad",
-    price: 35,
-    img: "images/3.PNG",
-  },
-  {
-    id: 4,
-    name: "Soup",
-    price: 25,
-    img: "images/4.PNG",
-  },
-  {
-    id: 5,
-    name: "Salad",
-    price: 15,
-    img: "images/5.PNG",
-  },
-  {
-    id: 6,
-    name: "Pizza",
-    price: 10,
-    img: "images/6.PNG",
-  },
-];
 const shop = document.getElementById("shop");
 let shoppingCart = [];
 
@@ -79,8 +41,8 @@ let increment = (id) => {
   } else {
     search.item += 1;
   }
-  localStorage.setItem("data", JSON.stringify(shoppingCart));
   update(id);
+  localStorage.setItem("data", JSON.stringify(shoppingCart));
 };
 let decrement = (id) => {
   let search = shoppingCart.find((x) => x.id === id);
@@ -90,7 +52,6 @@ let decrement = (id) => {
     search.item -= 1;
   }
   update(id);
-
   shoppingCart = shoppingCart.filter((x) => x.item !== 0);
   localStorage.setItem("data", JSON.stringify(shoppingCart));
 };
@@ -111,6 +72,5 @@ let calculation = () => {
 (() => {
   shoppingCart = JSON.parse(localStorage.getItem("data")) || [];
   generateShop();
+  calculation();
 })();
-
-calculation();

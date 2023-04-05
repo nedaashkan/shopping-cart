@@ -93,6 +93,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   font-size: 18px;
 }
@@ -103,4 +104,113 @@ a {
 
 .bi-plus-lg {
   color: green;
+}
+
+.cartEl h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.cartEl button {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  background-color: #e8bc0e;
+  cursor: pointer;
+}
+
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.card h1 {
+  color: #e8bc0e;
+  font-weight: 100;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 50px;
+  height: 80px;
+  text-align: center;
+}
+
+.listCard .list {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  row-gap: 10px;
+  margin-bottom: 10px;
+}
+li {
+  list-style: none;
+}
+.listCard li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listCard li img {
+  max-width: 110%;
+
+  padding: 10px;
+}
+.listCard li button {
+  background-color: #fff5;
+  border: none;
+}
+.cart-buttons {
+  margin-top: 0;
+}
+.name-price-box {
+  margin-top: 20px;
+}
+.cart-border {
+  text-align: center;
+  background-color: #d8dfe0;
+  padding: 20px;
+  box-shadow: 0 10px 10px #757676;
+  border-radius: 8px;
+  font-size: 17px;
+}
+#remove-box {
+  display: flex;
+  justify-content: end;
+}
+#remove-box i {
+  color: red;
+  font-size: 24px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+i {
+  cursor: pointer;
+}
+.cartEl {
+  margin-top: 50px;
+}
+.label {
+  text-align: center;
+  margin-top: 40px;
+}
+.label h2 {
+  margin-bottom: 20px;
+}
+.label button {
+  margin: 0 auto;
+  font-size: 20px;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+.label .clear {
+  background-color: red;
+}
+.checkout {
+  background-color: green;
 }
